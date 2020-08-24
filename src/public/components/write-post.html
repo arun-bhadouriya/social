@@ -1,0 +1,15 @@
+<h3 class ="font-weight-bold text-center text-underline m-4">Write Posts</h3>
+<form action="/api/posts" class="write_post" method="POST"> 
+    <input id="title" class="form-control form-control-lg my-2" name="title" type="text" placeholder="title">
+    <div class="form-group " >
+        <!-- <label for="exampleFormControlTextarea1"><u>Body :</u></label> -->
+        <textarea class="form-control  form-control-lg my-2" name="body" id="exampleFormControlTextarea1" rows="10" placeholder="body of the post"></textarea>
+    </div>
+    <button type="submit" id="submit" class="btn btn-primary">Post</button>
+</form>
+
+<script src="/js/write-post.js"></script>
+<script>
+    createPost(JSON.parse(window.localStorage.user).id, $('#tite').val(), $('#exampleFormControlTextarea1').val())
+</script>
+
